@@ -1,78 +1,190 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Hello!
-    </title>
+    <title>irfanhku</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        display: block;
+        font-family: "Inter", sans-serif;
+    }
 
-    <link rel="icon" href="https://icons-for-free.com/iff/png/512/placeholder-1324760545462884964.png">
+    .bg-main {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        pointer-events: none;
+        user-select: none;
+        position: fixed;
+        z-index: -1;
+    }
 
-    <!-- link bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-	
+    .tombol {
+        color: white;
+        background-color: #3888ffee;
+        border: 1px solid #3888ffee;
+        
+        font-size: 8px; 
+        cursor: pointer; 
+        border-radius: 10px; 
+        margin: 10px 0px;
+        padding: 10px 25px;
 
-    <!-- link FONT -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <style> 
-		:root {
-			--dark: #0e0e0e;
-		}
-		
-        body {
-          background-color: var(--dark);
-          height: 100vh;
-          margin: 0px;
-          overflow: hidden;
-          padding: 0px;
-        }
-		
-		p {
-			font-family: Inter; 
-			color: white; 
-			font-size: 25vh; 
-			font-weight: 600; 
-			user-select: none;
-			line-height: 1; 
-			letter-spacing: -0.05em; 
-			word-spacing: none;
-			transition: 0.5s ease-in-out;
-		}
-		
-		p:hover {
-		font-size: 27vh;
-  color: transparent;
-  background-image: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
-  background-size: 600% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: rainbowMove 3s linear infinite;
-}
+        font-weight: 700;
+        transition: ease-in-out 0.1s;
+    }
 
-@keyframes rainbowMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-		
-		
-    </style>
+    .tombol:hover {
+        background-color: #175abeee;
+        border: 1px solid #10438fee;
+        transform: scale(0.98);
+    }
+
+
+    .jam {
+        cursor: grab;
+        transition: ease-in-out 0.1s;
+    }
+
+    .jam:hover {
+        transform: scale(1.05);
+    }
     
+    .jam:active {
+        transform: scale(0.9);
+    }
+
+    #container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hidden {
+        display: none;
+        transition: ease-in-out 0.1s;
+    }
+
+
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+      }
+    }
+    </script>
+
 </head>
-  
 <body>
+    <!-- change to v2 -->
+    <img class="bg-main" src="placeholder-v1.jpg" style="filter: brightness(1); visibility: visible;">
 
-<div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
-  <p>
-  Hello There!
-  </p>
-</div>
+    
 
+    <div style="display: flex; flex-direction: column;justify-content: center; align-items: center; height: 100%; visibility: visible;">
+
+            <div class="jam" id="clock" style="display: flex; justify-content: center;">
+                <div id="container" style></div>
+                <script type="module" src="main.js"></script>
+            </div>
+
+        
+        <div data-aos="fade-up" id="hiddencontent" class="hidden" style="width: 70vw; max-width: 600px; height: fit-content; border-radius: 14px; border: 1px solid #eeee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: white; padding: 5px 20px 20px 20px;">
+            
+            <div style="display: flex; align-items: center; gap: 12px; height: fit-content;">
+                <span style="background-color: white; padding: 10px; border-radius: 14px; border: 1px solid #eeee;">👋</span>
+                <h2>Halohai</h2>
+            </div>
+            <div style="padding: 5px 20px 5px 20px;  border-radius: 14px; border: 1px solid #eeee; max-height: 15rem; overflow-y: scroll; text-align: center;">
+
+                <h4>You Found Me!</h4>
+                <p>Website ini digunakan untuk menyimpan aset-aset yang aku ingin share, feel free to download.</p>
+
+
+                <br>
+
+                <p style="font-weight: bold;">Blender Rig (version checked Blender 3.6.23 LTS)</p>
+                <p>Head model by youtuber tinynocky, selain itu aku yang model. ada 3 main bones: leg, body (bendy bones!) and head, dan bisa juga edit ekspresi muka dengan shape key. It's a janky rig... but it works.</p>
+                <a href="https://drive.google.com/uc?export=download&id=1IighxsnwF11Ue7SrEgOzkP0roihGjK_w" download>
+                    <button class="tombol">
+                        <div class="material-symbols-outlined">download</div>
+                        <div>NEWrigstatic_v5.blend</div>
+                    </button>
+                </a>
+                <br>
+                <a href="https://drive.google.com/uc?export=download&id=1N_DDwcO7ynXB7QqXjFdNgxqrZr85SnIS" download>
+                    <button class="tombol">
+                        <div class="material-symbols-outlined">download</div>
+                        <div>lari5NEWrigstatic.blend</div>
+                    </button>
+                </a>
+                <br><br>
+                <div style="width: 100%;">
+                    <img src="Capture1.PNG" style="width: 48%;">
+                    <img src="Capture2.PNG" style="width: 48%;">
+                </div>
+
+                <br><br>
+
+
+                <p style="font-weight: bold;">The Classroom</p>
+                <p>Cobain stylize 3d objek, berawal dari ngegambar 2d lalu buat 3d modelnya dan jadikan gambar sebagai texture objek tersebut.</p>
+                <a href="https://skfb.ly/o7DCW" target="_blank">
+                    <button class="tombol">
+                        <div class="material-symbols-outlined">arrow_outward</div>
+                        <div>sketchfab.com/joxthdg</div>
+                    </button>
+                </a>
+                <br><br>
+                <div class="sketchfab-embed-wrapper"> <iframe title="Classroom" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6259daf3e585451881963279a91b55a9/embed" style="width: 100%;"> </iframe> </div>
+
+                <br>
+
+                <p style="font-weight: bold; font-style: italic;">More nanti lagi...</p>
+
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("clock").addEventListener("click", function () {
+                document.getElementById("hiddencontent").classList.toggle("hidden");
+            });
+        </script>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        easing: 'ease-out',
+        duration: 800,
+        once: true
+        });
+    </script>
 
 </body>
 </html>
